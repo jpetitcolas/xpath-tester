@@ -3,3 +3,8 @@
 .settings
 .buildpath
 *.swp
+
+# Ignore Foundation compiled files
+.sass-cache
+stylesheets/foundation-style
+stylesheets/app.css
