@@ -1,0 +1,5 @@
+# Ignore IDE files
+.project
+.settings
+.buildpath
+*.swp
