@@ -8,7 +8,7 @@
         <header>
             <h1>XPath online tester</h1>
         </header>
-        <form method="POST" action="#">
+        <form method="POST" action="php/xpath-tester.php" id="xpath_form">
             <p>
                 <label for="xpath_expression">XPath expression:</label>
                 <input type="text" name="xpath_expression" id="xpath_expression" value="" />
@@ -21,11 +21,14 @@
                 <button type="submit">Evaluate</button>
             </p>
         </form>
+        <pre id="result"></pre>
         <footer>
             <p class="center">
                 XPath online tester is an open-source project under MIT licence, available on GitHub.<br />
                 Contributor: <a href="http://www.jonathan-petitcolas.com">Jonathan Petitcolas</a>
             </p>
         </footer>
+        <script src="js/jquery-1.7.min.js"></script>
+        <script src="js/xpath-tester.js"></script>
     </body>
 </html>
