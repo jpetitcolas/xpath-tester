@@ -15,28 +15,44 @@
     </head>
     <body>
         <header>
-            <h1>XPath online tester</h1>
+            <div class="row">
+                <div class="columns twelve">
+                    <h1>XPath online tester</h1>
+                </div>
+            </div>
         </header>
-        <form method="POST" action="php/xpath-tester.php" id="xpath_form">
-            <p>
-                <label for="xpath_expression">XPath expression:</label>
-                <input type="text" name="xpath_expression" id="xpath_expression" value="" />
-            </p>
-            <p>
-                <label for="xml_input">XML input:</label>
-                <textarea name="xml_input" id="xml_input" cols="50" rows="10"></textarea>
-            </p>
-            <p>
-                <button type="submit">Evaluate</button>
-            </p>
-        </form>
-        <pre id="result"></pre>
+        <div class="row">
+            <div class="columns six">
+                <form method="POST" action="php/xpath-tester.php" id="xpath_form">
+                    <p>
+                        <label for="xpath_expression">XPath expression:</label>
+                        <input type="text" name="xpath_expression" id="xpath_expression" value="" />
+                    </p>
+                    <p>
+                        <label for="xml_input">XML input:</label>
+                        <textarea name="xml_input" id="xml_input" cols="50" rows="10"></textarea>
+                    </p>
+                    <p>
+                        <button type="submit">Evaluate</button>
+                    </p>
+                </form>
+            </div>
+            <div class="columns six">
+                <pre id="result"></pre>
+            </div>
+        </div>
+
         <footer>
-            <p class="center">
-                XPath online tester is an open-source project under MIT licence, available on GitHub.<br />
-                Contributor: <a href="http://www.jonathan-petitcolas.com">Jonathan Petitcolas</a>
-            </p>
+            <div class="row">
+                <div class="columns twelve">
+                    <p class="text-center">
+                        XPath online tester is an open-source project under MIT licence, available on GitHub.<br />
+                        Contributor: <a href="http://www.jonathan-petitcolas.com">Jonathan Petitcolas</a>
+                    </p>
+                </div>
+            </div>
         </footer>
+
         <script src="javascripts/jquery.min.js"></script>
         <script src="javascripts/foundation/jquery.customforms.js"></script>
         <script src="javascripts/foundation/jquery.placeholder.min.js"></script>
