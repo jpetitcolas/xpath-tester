@@ -17,7 +17,7 @@
     $numberResults = $results->length;
     for($i = 0 ; $i < $numberResults ; $i++) {
         $result = $results->item($i);
-        $output[] = $result->nodeValue;
+        $output[] = $result->ownerDocument->saveXML($result);
     }
 
     echo json_encode($output);
