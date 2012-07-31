@@ -1,8 +1,8 @@
 <?php
 
-    // Retrieve the request
-    $xpathExpression = $_POST['xpath_expression'];
-    $xmlInput = $_POST['xml_input'];
+    // Trim is important here to avoid some empty lines at the beginning of the copy/paste.
+    $xpathExpression = trim($_POST['xpath_expression']);
+    $xmlInput = trim($_POST['xml_input']);
 
     // Execute XPath query
     $domDocument = new DOMDocument();
