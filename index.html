@@ -11,6 +11,8 @@
         <link href="stylesheets/foundation-style/tabs.css" media="screen, projector, print" rel="stylesheet" />
         <link href="stylesheets/foundation-style/navbar.css" media="screen, projector, print" rel="stylesheet" />
         <link href="stylesheets/foundation-style/forms.css" media="screen, projector, print" rel="stylesheet" />
+        <link href="stylesheets/app.css" media="screen, projector, print" rel="stylesheet" />
+        <link href="google-code-prettify/prettify.css" media="all" rel="stylesheet" />
         <script src="javascripts/foundation/modernizr.foundation.js"></script>
     </head>
     <body>
@@ -30,7 +32,7 @@
                     </p>
                     <p>
                         <label for="xml_input">XML input:</label>
-                        <textarea name="xml_input" id="xml_input" cols="50" rows="10"></textarea>
+                        <textarea name="xml_input" id="xml_input" cols="50" rows="16"></textarea>
                     </p>
                     <p>
                         <button type="submit">Evaluate</button>
@@ -38,7 +40,8 @@
                 </form>
             </div>
             <div class="columns six">
-                <pre id="result"></pre>
+                <p class="result">XPath query result:</p>
+                <pre id="result" class="prettyprint"></pre>
             </div>
         </div>
 
@@ -57,6 +60,7 @@
         <script src="javascripts/foundation/jquery.customforms.js"></script>
         <script src="javascripts/foundation/jquery.placeholder.min.js"></script>
         <script src="javascripts/foundation/jquery.tooltips.js"></script>
+        <script src="google-code-prettify/prettify.js"></script>
         <script src="javascripts/app.js"></script>
     </body>
 </html>
