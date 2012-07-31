@@ -1,9 +1,13 @@
 jQuery(document).ready(function ($) {
 
-    function htmlentities(input) {
+    function prepareOutput(input) {
         
+        // Replace all special characters to their HTML equivalent
         input = input.replace(/</g, '&lt;');
         input = input.replace(/>/g, '&gt;');
+
+        // Restablish highlighted span one
+        input = input.replace(/&lt;span class="highlight"&gt;(.+)&lt;\/span&gt;/g, "<span class=\"highlight\">$1</span>");
 
         return input;
 
@@ -14,27 +18,13 @@ jQuery(document).ready(function ($) {
     $("#xpath_form").submit(function(e) {
                 
         e.preventDefault();
-
-        var that = this;
                 
         $.ajax({
             url: that.action,
             type: "POST",
             data: $(that).serialize(),
-            dataType: "json",
             success: function(response) {
-
-                // Copy XML input into result div
-                var xml = htmlentities($("#xml_input").val());
-
-                // Highlight query results
-                for(var i = 0 ; i < response.length ; i++) {
-
-                    var regex = new RegExp('(' + htmlentities(response[i]) + ')', 'g');
-                    xml = xml.replace(regex, '<span class="highlight">$1</span>', xml);
-                }
-                
-                $("#result").html(xml);
+                $("#result").html(prepareOutput(response));
             }
         });
 

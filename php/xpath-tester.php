@@ -11,13 +11,21 @@
     $xpath = new DOMXPath($domDocument);
     $results = $xpath->query($xpathExpression);
 
-    // Turn results into JSON
-    $output = array();
+    // Highlight matching elements by adding a correct span
+    $output = $domDocument->saveXML();
 
     $numberResults = $results->length;
     for($i = 0 ; $i < $numberResults ; $i++) {
+        
+        // Retrieve match XML
         $result = $results->item($i);
-        $output[] = $result->ownerDocument->saveXML($result);
+        $result = $result->ownerDocument->saveXML($result);
+
+        // Highlight it
+        $regex = '/'.str_replace('/', '\/', $result).'/';
+        $replacingString = sprintf('<span class="highlight">%s</span>', $result);
+        $output = preg_replace($regex, $replacingString, $output);
+
     }
 
-    echo json_encode($output);
+    echo $output;
