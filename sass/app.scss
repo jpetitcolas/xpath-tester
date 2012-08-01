@@ -6,10 +6,13 @@
     width: 90%;
 }
 
-pre {
+code {
     @extend textarea;
     height: 361px;
     overflow: auto;
+    background: transparent;
+    font-weight: normal;
+    white-space: pre;
 }
 
 .result {

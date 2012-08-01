@@ -4,16 +4,22 @@
     $xpathExpression = trim($_POST['xpath_expression']);
     $xmlInput = trim($_POST['xml_input']);
 
+    // Also remove all break lines and tabs to allow a correct output indentation.
+    $xmlInput = strtr($xmlInput, array("\t" => '', "\n" => '', "\r" => ''));
+
     // Execute XPath query
     $domDocument = new DOMDocument();
     $domDocument->loadXml($xmlInput);
+
+    $domDocument->formatOutput = true;
+    $domDocument->preserveWhiteSpace = true;
 
     $xpath = new DOMXPath($domDocument);
     $results = $xpath->query($xpathExpression);
 
     // Highlight matching elements by adding a correct span
     $output = htmlentities($domDocument->saveXML(), ENT_QUOTES, 'utf-8');
-
+    
     $numberResults = $results->length;
     for($i = 0 ; $i < $numberResults ; $i++) {
         
