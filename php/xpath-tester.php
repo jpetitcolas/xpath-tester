@@ -12,17 +12,17 @@
     $results = $xpath->query($xpathExpression);
 
     // Highlight matching elements by adding a correct span
-    $output = $domDocument->saveXML();
+    $output = htmlentities($domDocument->saveXML(), ENT_QUOTES, 'utf-8');
 
     $numberResults = $results->length;
     for($i = 0 ; $i < $numberResults ; $i++) {
         
         // Retrieve match XML
         $result = $results->item($i);
-        $result = $result->ownerDocument->saveXML($result);
-
+        $result = htmlentities($result->ownerDocument->saveXML($result), ENT_QUOTES, 'utf-8');
+        
         // Highlight it
-        $regex = '/'.str_replace('/', '\/', $result).'/';
+        $regex = '#'.preg_quote($result).'#';
         $replacingString = sprintf('<span class="highlight">%s</span>', $result);
         $output = preg_replace($regex, $replacingString, $output);
 
