@@ -4,7 +4,5 @@
 .buildpath
 *.swp
 
-# Ignore Foundation compiled files
+# Ignore Foundation compilation file
 .sass-cache
-stylesheets/foundation-style
-stylesheets/app.css
