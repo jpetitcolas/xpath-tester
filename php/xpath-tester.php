@@ -7,6 +7,9 @@
     // Also remove all break lines and tabs to allow a correct output indentation.
     $xmlInput = strtr($xmlInput, array("\t" => '', "\n" => '', "\r" => ''));
 
+    // And turn xmlns root attribute to ns to be able to parse document
+    $xmlInput = str_replace('xmlns=', 'ns=', $xmlInput);
+
     // Execute XPath query
     $domDocument = new DOMDocument();
     $domDocument->loadXml($xmlInput);
