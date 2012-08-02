@@ -2,6 +2,14 @@
 @import "foundation/base";
 @import "foundation/forms";
 
+.github-corner a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    z-index: 10;
+}
+
 .row {
     width: 90%;
 }

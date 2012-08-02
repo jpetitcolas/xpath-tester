@@ -490,11 +490,20 @@ form.custom .custom.disabled {
 }
 
 /* line 5, ../sass/app.scss */
+.github-corner a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  z-index: 10;
+}
+
+/* line 13, ../sass/app.scss */
 .row {
   width: 90%;
 }
 
-/* line 9, ../sass/app.scss */
+/* line 17, ../sass/app.scss */
 code {
   height: 361px;
   overflow: auto;
