@@ -31,10 +31,7 @@
         $result = htmlentities($result->ownerDocument->saveXML($result), ENT_QUOTES, 'utf-8');
         
         // Highlight it
-        $regex = '#'.preg_quote($result, '#').'#';
-        $replacingString = sprintf('<span class="highlight">%s</span>', $result);
-        $output = preg_replace($regex, $replacingString, $output);
-
+        $output = str_replace($result, '<span class="highlight">'.$result.'</span>', $output);
     }
 
     echo $output;
