@@ -10,7 +10,7 @@
     $xmlInput = strtr($xmlInput, array("\t" => '', "\n" => '', "\r" => ''));
 
     // And turn xmlns root attribute to ns to be able to parse document
-    $xmlInput = str_replace('xmlns=', 'ns=', $xmlInput);
+    $xmlInput = preg_replace('#xmlns(:.+)?=#U', ' ns\1=', $xmlInput);
 
     // Execute XPath query
     $domDocument = new DOMDocument();
