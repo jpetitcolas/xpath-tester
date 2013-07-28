@@ -34,7 +34,7 @@
         $output = str_replace($result, $replacingString, $output);
 
     }
-
+$rawResults = $output;
     // Format the XML result
     $domDocument = new DOMDocument();
     $domDocument->loadXml($output);
@@ -54,5 +54,5 @@
     $output = preg_replace('#'.PHP_EOL.'( *)<span class="highlight">#', '<span class="highlight">', $output);
     $output = preg_replace('#( *)</span>( *)'.PHP_EOL.'#', '</span>', $output);
 
-    echo $output;
+echo json_encode(array('output'=>$output, 'numberResults'=>$numberResults , 'rawResults'=>$rawResults));
 
