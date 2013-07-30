@@ -4,15 +4,14 @@ jQuery(document).ready(function($)
 	{
 		e.preventDefault();
 		var that = this;
-						$("#result, #result-count, #raw-result").empty().css(
-				{
-					backgroundColor: '#FFFF99'
-				});
+		$("#result, #result-count, #raw-result").empty().css(
+		{
+			backgroundColor: '#FFFF99'
+		});
 		var request = $.ajax(
 		{
 			url: that.action,
 			type: "POST",
-			async: true,
 			data: $(that).serialize(),
 			dataType: "json",
 		});
