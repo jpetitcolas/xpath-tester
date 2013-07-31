@@ -34,7 +34,6 @@ for($i = 0 ; $i < $numberResults ; $i++) {
 	$output = str_replace($result, $replacingString, $output);
 
 }
-$rawResults = $output;
 
 // Format the XML result
 $domDocument = new DOMDocument();
@@ -58,5 +57,4 @@ $output = preg_replace('#( *)</span>( *)'.PHP_EOL.'#', '</span>', $output);
 echo json_encode(array(
 	'output' => $output,
 	'numberResults' => $numberResults,
-	'rawResults'=>$rawResults
 ));
