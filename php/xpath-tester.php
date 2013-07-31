@@ -35,6 +35,7 @@ for($i = 0 ; $i < $numberResults ; $i++) {
 
 }
 $rawResults = $output;
+
 // Format the XML result
 $domDocument = new DOMDocument();
 $domDocument->loadXml($output);
