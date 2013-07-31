@@ -3,6 +3,7 @@
 .settings
 .buildpath
 *.swp
+.DS_Store
 
 # Ignore Foundation compilation file
 .sass-cache
