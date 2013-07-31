@@ -35,13 +35,11 @@ for($i = 0 ; $i < $numberResults ; $i++) {
 
 }
 
-// Format the XML result
+// Format the XML result with some indentation
 $domDocument = new DOMDocument();
-$domDocument->loadXml($output);
-
-// With some indentation
+$domDocument->preserveWhiteSpace = false; // Required for correct formatOutput behavior
 $domDocument->formatOutput = true;
-$domDocument->preserveWhiteSpace = true;
+$domDocument->loadXml($output);
 
 // Convert all angle brackets to a correct display
 $output = htmlentities($domDocument->saveXml(), ENT_QUOTES, 'utf-8');
