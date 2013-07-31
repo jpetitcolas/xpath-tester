@@ -55,4 +55,8 @@ $output = str_replace('&lt;!-- END-'.HIGHLIGHT_TOKEN.' --&gt;', '</span>', $outp
 $output = preg_replace('#'.PHP_EOL.'( *)<span class="highlight">#', '<span class="highlight">', $output);
 $output = preg_replace('#( *)</span>( *)'.PHP_EOL.'#', '</span>', $output);
 
-echo json_encode(array('output'=>$output, 'numberResults'=>$numberResults , 'rawResults'=>$rawResults));
+echo json_encode(array(
+	'output' => $output,
+	'numberResults' => $numberResults,
+	'rawResults'=>$rawResults
+));

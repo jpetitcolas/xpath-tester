@@ -511,3 +511,7 @@ code {
   font-weight: normal;
   white-space: pre;
 }
+
+.right {
+  text-align: right;
+}
