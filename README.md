@@ -2,9 +2,6 @@
 
 XPath tester is a simple utility allowing you to test easily and quickly a XPath request.
 
-An online preview version is available below. However, for lightning performances, please consider installing it on your own development server.
-The only requirement is to deploy it on a server understanding PHP (DOMDocument module is used to execute your queries).
+There is currently no online version. Indeed, for lightning performances, you should consider deploying this app on your own development server. This way, network latencies will be negligible (as the process implies an AJAX request). The only requirement is having a server understanding PHP (DOMDocument module is used to execute your queries).
 
-* [XPath online tester](http://www.jonathan-petitcolas.com/labs/xpath-tester/)
-
-This project is powered by [Foundation](http://foundation.zurb.com) and [JQuery](http://www.jquery.com). Thanks to all these teams for their incredible work! :)
+![ScreenShot](https://raw.github.com/jpetitcolas/xpath-tester/master/images/xpath-tester.png)
