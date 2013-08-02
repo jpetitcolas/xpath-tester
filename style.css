@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: #222;
+}
+
+.github-corner {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.6;
+	margin-bottom: 17px;
+}
+
+h1 {
+	font-size: 44px;
+	text-rendering: optimizeLegibility;
+	line-height: 1.1;
+	margin: 14px 0;
+}
+
+a {
+	color: #2795b6;
+	text-decoration: none;
+}
+
+.row {
+	width: 90%;
+	max-width: 100%;
+	min-width: 768px;
+	margin: auto;
+}
+
+.columns {
+	float: left;
+	min-height: 1px;
+	padding: 0 15px;
+	position: relative;
+}
+
+[class*="column"] + [class*="column"]:last-child {
+	float: right;
+}
+
+.row .six {
+	width: 50%;
+}
+
+.row .twelve {
+	width: 100%;
+}
+
+label, .result {
+	font-size: 14px;
+	color: #4d4d4d;
+	cursor: pointer;
+	display: block;
+	font-weight: 500;
+	margin-bottom: 3px;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea, code {
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	color: rgba(0, 0, 0, 0.75);
+	display: block;
+	font-size: 14px;
+	margin: 0 0 12px 0;
+	padding: 6px;
+	height: 32px;
+	width: 100%;
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	-o-transition: all 0.15s linear;
+	transition: all 0.15s linear;
+}
+
+textarea {
+	height: auto;
+}
+
+code {
+	min-height: 364px;
+	height: auto;
+	overflow: auto;
+	white-space: pre;
+}
+
+code .highlight {
+	background: #ff9;
+}
+
+button {
+	padding: 1px 6px;
+}
+
+footer {
+	text-align: center;
+}
+
+.result span {
+	display: inline-block;
+	float: left;
+}
+
+.result span#result-count {
+	float: right;
+}
+
+.result span.clear {
+	clear: both;
+}

@@ -3,16 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>XPath online tester - Available on GitHub</title>
-        <link href="stylesheets/foundation-style/globals.css" media="screen, projector, print" rel="stylesheet" />
-        <link href="stylesheets/foundation-style/typography.css" media="screen, projector, print" rel="stylesheet" />
-        <link href="stylesheets/foundation-style/grid.css" media="screen, projector, print" rel="stylesheet" />
-        <link href="stylesheets/foundation-style/ui.css" media="screen, projector, print" rel="stylesheet" />
-        <link href="stylesheets/foundation-style/buttons.css" media="screen, projector, print" rel="stylesheet" />
-        <link href="stylesheets/foundation-style/tabs.css" media="screen, projector, print" rel="stylesheet" />
-        <link href="stylesheets/foundation-style/navbar.css" media="screen, projector, print" rel="stylesheet" />
-        <link href="stylesheets/foundation-style/forms.css" media="screen, projector, print" rel="stylesheet" />
-        <link href="stylesheets/app.css" media="screen, projector, print" rel="stylesheet" />
-        <script src="javascripts/foundation/modernizr.foundation.js"></script>
+        <link href="style.css" rel="stylesheet" />
     </head>
     <body>
         <div class="github-corner">
@@ -44,14 +35,11 @@
                 </form>
             </div>
             <div class="columns six">
-                <div class="row">
-                    <div class="columns six">
-                        <p class="result">XPath query result:</p>
-                    </div>
-                    <div class="columns six right">
-                        <span id="result-count"></span>
-                    </div>
-                </div>
+                <p class="result">
+                    <span>XPath query result</span>
+                    <span id="result-count">12 results</span>
+                    <span class="clear"></span>
+                </p>
                 <code id="result"></code>
             </div>
         </div>
@@ -68,7 +56,6 @@
         </footer>
 
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script src="javascripts/jquery.color.js"></script>
         <script src="javascripts/app.js"></script>
     </body>
 </html>
