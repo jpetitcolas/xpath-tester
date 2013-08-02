@@ -13,6 +13,7 @@ body {
 	position: absolute;
 	top: 0;
 	right: 0;
+	z-index: 10;
 }
 
 p {
@@ -125,4 +126,14 @@ footer {
 
 .result span.clear {
 	clear: both;
+}
+
+.error {
+	color: #b94a48;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	padding: 10px 35px 10px 15px;
+	margin-bottom: 20px;
+	border: 1px solid #fbeed5;
+	border-radius: 4px;
 }
