@@ -1,9 +1,0 @@
-# Ignore IDE files
-.project
-.settings
-.buildpath
-*.swp
-.DS_Store
-
-# Ignore Foundation compilation file
-.sass-cache
